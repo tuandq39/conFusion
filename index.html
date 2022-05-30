@@ -70,9 +70,7 @@
           </ul>
         </div>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
-            <span class="fa fa-sign-in"></span> Login</a
-          >
+          <a id="LoginButton"> <span class="fa fa-sign-in"></span> Login</a>
         </span>
       </div>
     </nav>
@@ -161,8 +159,7 @@
           <div class="text-center justify-content-center">
             <button
               class="btn btn-warning btn-lg text-center justify-content-center align-self-center"
-              data-toggle="modal"
-              data-target="#myModal"
+              id="ReserveButton"
             >
               Reserve a table
             </button>
@@ -330,14 +327,15 @@
             </div> -->
           <div class="modal-header">
             <!-- <h4 class="modal-title">Reserver a table</h4> -->
+            <h3>Reserver a table</h3>
             <button class="close" data-dismiss="modal" type="button">
               &times;
             </button>
           </div>
           <div class="modal-content">
-            <div class="card-header bg-warning">
+            <!-- <div class="card-header bg-warning">
               <h3>Reserver a table</h3>
-            </div>
+            </div> -->
             <form action="" class="container">
               <div class="form-group row">
                 <label for="" class="form-check-label col-sm-3"
@@ -350,9 +348,7 @@
                     name="inlineRadioOptions"
                     id="inlineRadio1"
                     value="option1"
-                  /><label for="" class="form-check-label" for="inlineRadio1"
-                    >1</label
-                  >
+                  /><label class="form-check-label" for="inlineRadio1">1</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input
@@ -361,18 +357,43 @@
                     name="inlineRadioOptions"
                     id="inlineRadio2"
                     value="option2"
-                  /><label for="" class="form-check-label" for="inlineRadio2"
-                    >2</label
-                  >
+                  /><label class="form-check-label" for="inlineRadio2">2</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input
                     type="radio"
                     class="form-check-input"
-                    name="inlineRadionOptions"
+                    name="inlineRadioOptions"
                     id="inlineRadio3"
                     value="option3"
-                  />3<label for="" class="form-check-label"></label>
+                  /><label for="inlineRadio3" class="form-check-label">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="inlineRadioOptions"
+                    id="inlineRadio3"
+                    value="option3"
+                  /><label for="inlineRadio3" class="form-check-label">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="inlineRadioOptions"
+                    id="inlineRadio3"
+                    value="option3"
+                  /><label for="inlineRadio3" class="form-check-label">5</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="inlineRadioOptions"
+                    id="inlineRadio3"
+                    value="option3"
+                  /><label for="inlineRadio3" class="form-check-label">6</label>
                 </div>
               </div>
 
@@ -531,6 +552,17 @@
           $("#carouselButton").children("span").removeClass("fa-play");
           $("#carouselButton").children("span").addClass("fa-pause");
         }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#LoginButton").click(function () {
+          $("#loginModal").modal("toggle");
+        });
+        $("#ReserveButton").click(function () {
+          console.log("button click reserve");
+          $("#myModal").modal("toggle");
+        });
       });
     </script>
   </body>
